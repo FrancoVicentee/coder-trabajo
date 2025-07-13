@@ -1,0 +1,26 @@
+// Para centrar contenido con flexbox
+@mixin flex-center($direction: row) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+// Estilo de botón reutilizable
+@mixin button-style($bg-color, $text-color: white) {
+    display: inline-block;
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+        background-color: darken($bg-color, 10%); // Operador de SASS
+        transform: translateY(-2px);
+    }
+}

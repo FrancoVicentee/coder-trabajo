@@ -1,0 +1,23 @@
+// Animación para elementos al aparecer (ej. si se cargan dinámicamente)
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.fade-in-on-load {
+    animation: fadeInScale 0.6s ease-out forwards;
+}
+
+// Ejemplo de animación de giro para icono (si tuviéramos uno, ej. para cargar)
+.rotate-animation {
+    transition: transform 0.5s ease-in-out;
+    &:hover {
+        transform: rotate(360deg);
+    }
+}
