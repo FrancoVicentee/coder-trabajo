@@ -1,0 +1,18 @@
+// Punto de entrada de estilos — se importa desde src/js/main.js
+@use 'base/root';
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/utilities';
+
+@use 'layout/header';
+@use 'layout/footer';
+
+@use 'components/animations';
+@use 'components/buttons';
+@use 'components/forms';
+@use 'components/marquee';
+@use 'components/product-card';
+@use 'components/modal';
+
+@use 'pages/home';
+@use 'pages/inner';

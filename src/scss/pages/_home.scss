@@ -1,0 +1,392 @@
+@use '../abstracts' as *;
+
+// ---------- Hero ----------
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100svh;
+  padding-block: calc($header-h + 3rem) 5rem;
+  overflow: hidden;
+  isolation: isolate;
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.35;
+      filter: grayscale(0.6) contrast(1.1);
+      transform: scale(1.08) translateY(var(--parallax, 0px));
+    }
+  }
+
+  // Degradados encima de la foto para fundirla con el fondo
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      radial-gradient(50% 60% at 78% 45%, rgb(255 107 26 / 0.28), transparent 70%),
+      linear-gradient(90deg, var(--bg) 15%, rgb(11 11 15 / 0.6) 55%, rgb(11 11 15 / 0.3)),
+      linear-gradient(0deg, var(--bg) 2%, transparent 40%);
+  }
+
+  &__inner {
+    display: grid;
+    align-items: center;
+    gap: 3rem;
+
+    @include up($bp-md) {
+      grid-template-columns: 1.15fr 0.85fr;
+    }
+  }
+
+  &__content {
+    display: grid;
+    gap: 1.6rem;
+    justify-items: start;
+  }
+
+  &__title {
+    @include display(clamp(4.2rem, 13vw, 10rem));
+    line-height: 0.86;
+
+    .line {
+      display: block;
+      overflow: hidden;
+      // Espacio extra para que no se recorten tildes y descendentes
+      padding-block: 0.1em 0.04em;
+      margin-top: -0.1em;
+
+      > span {
+        display: inline-block;
+        animation: rise 1s $ease-out both;
+      }
+
+      &:nth-child(2) > span {
+        animation-delay: 0.12s;
+      }
+    }
+  }
+
+  &__lead {
+    max-width: 48ch;
+    color: var(--muted);
+    font-size: clamp(1rem, 1.6vw, 1.15rem);
+    animation: fade-in 1s 0.35s both;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    animation: fade-in 1s 0.5s both;
+  }
+
+  &__visual {
+    position: relative;
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1;
+    max-width: 460px;
+    width: 100%;
+    margin-inline: auto;
+
+    @include down($bp-md) {
+      display: none;
+    }
+  }
+
+  &__scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 1.75rem;
+    display: grid;
+    justify-items: center;
+    gap: 0.5rem;
+    color: var(--muted);
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    transform: translateX(-50%);
+
+    @include down($bp-md) {
+      display: none;
+    }
+
+    span {
+      width: 1px;
+      height: 42px;
+      background: linear-gradient(var(--accent), transparent);
+      animation: float 2s ease-in-out infinite;
+    }
+  }
+}
+
+// Pelota animada (SVG) con su sombra y órbitas
+.ball-stage {
+  --drop: 150px;
+  position: relative;
+  display: grid;
+  justify-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.ball {
+  width: 46%;
+  filter: drop-shadow(0 20px 40px rgb(255 107 26 / 0.45));
+  animation: bounce-ball 1.6s infinite;
+
+  svg {
+    width: 100%;
+    animation: spin 6s linear infinite;
+  }
+}
+
+.ball-shadow {
+  position: absolute;
+  top: calc(46% + var(--drop) - 2%);
+  width: 40%;
+  height: 7%;
+  border-radius: 50%;
+  background: radial-gradient(rgb(255 107 26 / 0.6), transparent 70%);
+  animation: shadow-pulse 1.6s infinite;
+}
+
+.orbit {
+  position: absolute;
+  inset: 4%;
+  border: 1px dashed rgb(255 255 255 / 0.12);
+  border-radius: 50%;
+  animation: spin 40s linear infinite;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 18px var(--accent);
+  }
+
+  &--inner {
+    inset: 18%;
+    border-style: solid;
+    border-color: rgb(255 107 26 / 0.15);
+    animation-duration: 26s;
+    animation-direction: reverse;
+
+    &::after {
+      top: -5px;
+      left: 50%;
+      background: var(--accent-2);
+    }
+  }
+}
+
+// ---------- Stats ----------
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 2.5rem;
+  margin-top: 1rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border);
+  animation: fade-in 1s 0.7s both;
+
+  div {
+    display: grid;
+  }
+
+  dt {
+    order: 2;
+    color: var(--muted);
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  dd {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 5vw, 3.2rem);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+
+    span {
+      color: var(--accent);
+    }
+  }
+}
+
+// ---------- Categorías ----------
+.categories {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+}
+
+.category-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 340px;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: radial-gradient(circle at 50% 35%, #fff, var(--product-bg) 75%);
+  overflow: hidden;
+  isolation: isolate;
+  @include focus-ring;
+
+  img {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 2rem 6rem;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    transition: transform 0.7s $ease-out;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(0deg, var(--bg) 18%, rgb(11 11 15 / 0.6) 38%, transparent 62%);
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  @include hover {
+    img {
+      transform: scale(1.08);
+    }
+
+    .arrow-chip {
+      background: var(--accent);
+      color: #0b0b0f;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+// ---------- Beneficios ----------
+.features {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+}
+
+.feature {
+  position: relative;
+  display: grid;
+  gap: 0.75rem;
+  align-content: start;
+  padding: 1.75rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--surface), transparent);
+  transition:
+    border-color 0.3s ease,
+    transform 0.4s $ease-out;
+
+  &__icon {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    transition: transform 0.5s $ease-spring;
+
+    svg {
+      width: 26px;
+      height: 26px;
+    }
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  @include hover {
+    border-color: rgb(255 107 26 / 0.4);
+    transform: translateY(-4px);
+
+    .feature__icon {
+      transform: rotate(-8deg) scale(1.1);
+    }
+  }
+}
+
+// ---------- CTA final ----------
+.cta-band {
+  position: relative;
+  display: grid;
+  gap: 1.5rem;
+  justify-items: start;
+  padding: clamp(2.5rem, 7vw, 5rem);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgb(255 107 26 / 0.3);
+  overflow: hidden;
+  isolation: isolate;
+
+  > img {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      radial-gradient(60% 90% at 100% 100%, rgb(255 107 26 / 0.45), transparent 70%),
+      linear-gradient(90deg, rgb(11 11 15 / 0.95) 30%, rgb(11 11 15 / 0.55));
+  }
+
+  h2 {
+    max-width: 14ch;
+    font-size: clamp(2.8rem, 7vw, 5rem);
+  }
+
+  p {
+    max-width: 46ch;
+    color: #d4d4d8;
+  }
+}

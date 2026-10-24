@@ -1,84 +1,255 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elementos de Básquetbol - Inicio</title>
-    <link rel="stylesheet" href="css/style.css">
-    </head>
-<body>
-    <header>
-        <h1><a href="index.html">Elementos de Básquetbol</a></h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="pages/productos.html">Productos</a></li>
-                <li><a href="pages/nosotros.html">Nosotros</a></li>
-                <li><a href="pages/contacto.html">Contacto</a></li>
-            </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CurrySite · Equipamiento de básquetbol</title>
+    <meta name="description" content="Balones, zapatillas, indumentaria y accesorios de básquetbol originales. Envíos a todo el país y asesoramiento de jugadores." />
+    <meta name="theme-color" content="#0b0b0f" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="CurrySite · Equipamiento de básquetbol" />
+    <meta property="og:description" content="Todo para llevar tu juego al siguiente nivel." />
+    <meta property="og:image" content="/img/hero-arena.webp" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="preload" as="image" href="/img/hero-arena.webp" fetchpriority="high" />
+    <script>document.documentElement.classList.add('js')</script>
+    <script type="module" src="/src/js/main.js"></script>
+  </head>
+  <body data-page="home">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="logo" href="/" aria-label="CurrySite, ir al inicio">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#FF6B1A" /><g fill="none" stroke="#0B0B0F" stroke-width="3"><path d="M2 32h60M32 2v60M11 11c9 9 9 33 0 42M53 11c-9 9-9 33 0 42" /></g></svg>
+          <span>Curry<em>Site</em></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" id="main-nav" aria-label="Principal">
+          <ul class="nav__list" role="list">
+            <li><a class="nav__link" href="/">Inicio</a></li>
+            <li><a class="nav__link" href="/pages/productos.html">Productos</a></li>
+            <li><a class="nav__link" href="/pages/nosotros.html">Nosotros</a></li>
+            <li><a class="nav__link" href="/pages/contacto.html">Contacto</a></li>
+            <li class="nav__cta"><a class="btn btn--sm" href="/pages/productos.html">Ver catálogo</a></li>
+          </ul>
         </nav>
+      </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <h2>Encuentra todo para tu juego</h2>
-            <p>Desde balones hasta zapatillas de alto rendimiento para llevar tu juego al siguiente nivel.</p>
-            <a href="pages/productos.html" class="button">Explora Nuestros Productos</a>
-        </section>
-
-        <section class="productos-destacados">
-            <h2>Nuestros Artículos Más Populares</h2>
-            <div class="grid-productos">
-                <div class="producto-card">
-                    <img src="img/balon.jpg" alt="Balón de Básquetbol Oficial">
-                    <h4>Balón Oficial Profesional</h4>
-                    <p>Diseñado para un agarre y control inigualables en cada partido.</p>
-                    <button class="button">Ver Detalles</button>
-                </div>
-                <div class="producto-card">
-                    <img src="img/zapatillas.jpg" alt="Zapatillas de Básquetbol de Alto Rendimiento">
-                    <h4>Zapatillas Elite Pro</h4>
-                    <p>Máxima amortiguación y soporte para movimientos explosivos en la cancha.</p>
-                    <button class="button">Ver Detalles</button>
-                </div>
-                <div class="producto-card">
-                    <img src="img/Vicente14.jpeg" alt="Jersey de Básquetbol">
-                    <h4>Jersey Dry-Fit Personalizable</h4>
-                    <p>Confort y estilo para entrenar y jugar con la mejor indumentaria.</p>
-                    <button class="button">Ver Detalles</button>
-                </div>
-                <div class="producto-card">
-                    <img src="img/Vicente7.jpg" alt="Tablero de Básquetbol">
-                    <h4>Tablero Profesional Portátil</h4>
-                    <p>Instalación rápida y durabilidad para cualquier superficie.</p>
-                    <button class="button">Ver Detalles</button>
-                </div>
-                <div class="producto-card">
-                    <img src="img/vicente8.jpg" alt="Red de Básquetbol Reforzada">
-                    <h4>Red Reforzada Anti-Vandalismo</h4>
-                    <p>Diseñada para resistir el uso intenso y las condiciones climáticas.</p>
-                    <button class="button">Ver Detalles</button>
-                </div>
-                <div class="producto-card">
-                    <img src="img/vicente9.jpg" alt="Muñequera Deportiva Transpirable">
-                    <h4>Set de Muñequeras Pro</h4>
-                    <p>Absorción de sudor superior y soporte ligero para tus muñecas.</p>
-                    <button class="button">Ver Detalles</button>
-                </div>
+    <main id="contenido">
+      <section class="hero">
+        <div class="hero__bg"><img src="/img/hero-arena.webp" alt="" width="1600" height="900" fetchpriority="high" /></div>
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <span class="eyebrow">Temporada 2026</span>
+            <h1 class="hero__title">
+              <span class="line"><span>Elevá</span></span>
+              <span class="line"><span>tu <span class="text-gradient">juego</span></span></span>
+            </h1>
+            <p class="hero__lead">Balones, zapatillas de alto rendimiento y todo el equipamiento para que cada posesión cuente. Productos originales, elegidos por jugadores.</p>
+            <div class="hero__actions">
+              <a class="btn" href="/pages/productos.html">
+                Explorar productos
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </a>
+              <a class="btn btn--ghost" href="/pages/nosotros.html">Conocenos</a>
             </div>
-        </section>
+            <dl class="stats">
+              <div><dt>Online desde</dt><dd><span>2025</span></dd></div>
+              <div><dt>Clientes felices</dt><dd>+<span data-count="5000">5.000</span></dd></div>
+              <div><dt>Productos originales</dt><dd><span data-count="100">100</span>%</dd></div>
+            </dl>
+          </div>
 
-        <section class="call-to-action">
+          <div class="hero__visual" aria-hidden="true">
+            <div class="orbit"></div>
+            <div class="orbit orbit--inner"></div>
+            <div class="ball-stage">
+              <div class="ball">
+                <svg viewBox="0 0 200 200">
+                  <defs>
+                    <radialGradient id="ball-shade" cx="35%" cy="30%" r="75%">
+                      <stop offset="0" stop-color="#ffb06b" />
+                      <stop offset="0.55" stop-color="#ff6b1a" />
+                      <stop offset="1" stop-color="#b73d00" />
+                    </radialGradient>
+                  </defs>
+                  <circle cx="100" cy="100" r="96" fill="url(#ball-shade)" />
+                  <g fill="none" stroke="#1a0a00" stroke-width="5" stroke-linecap="round">
+                    <path d="M4 100h192M100 4v192" />
+                    <path d="M33 30c28 28 28 112 0 140M167 30c-28 28-28 112 0 140" />
+                  </g>
+                </svg>
+              </div>
+              <span class="ball-shadow"></span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__scroll" aria-hidden="true">Scroll<span></span></div>
+      </section>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <div class="marquee__group">
+            <span>Balones</span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5" /></svg>
+            <span>Zapatillas</span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5" /></svg>
+            <span>Indumentaria</span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5" /></svg>
+            <span>Accesorios</span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5" /></svg>
+            <span>Envíos a todo el país</span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5" /></svg>
+          </div>
+          <div class="marquee__group">
+            <span>Balones</span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5" /></svg>
+            <span>Zapatillas</span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5" /></svg>
+            <span>Indumentaria</span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5" /></svg>
+            <span>Accesorios</span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5" /></svg>
+            <span>Envíos a todo el país</span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5" /></svg>
+          </div>
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Categorías</span>
+            <h2>Armá tu equipo completo</h2>
+          </div>
+          <div class="categories">
+            <a class="category-tile reveal" style="--i: 0" href="/pages/productos.html?cat=balones">
+              <img src="/img/balon-fiba.webp" alt="" loading="lazy" width="700" height="700" />
+              <h3 data-category-name="balones">Balones</h3>
+              <p><span data-category-count="balones"></span><span class="arrow-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span></p>
+            </a>
+            <a class="category-tile reveal" style="--i: 1" href="/pages/productos.html?cat=zapatillas">
+              <img src="/img/curry-flow.webp" alt="" loading="lazy" width="700" height="700" />
+              <h3 data-category-name="zapatillas">Zapatillas</h3>
+              <p><span data-category-count="zapatillas"></span><span class="arrow-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span></p>
+            </a>
+            <a class="category-tile reveal" style="--i: 2" href="/pages/productos.html?cat=indumentaria">
+              <img src="/img/camiseta-jordan-23.webp" alt="" loading="lazy" width="225" height="225" />
+              <h3 data-category-name="indumentaria">Indumentaria</h3>
+              <p><span data-category-count="indumentaria"></span><span class="arrow-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span></p>
+            </a>
+            <a class="category-tile reveal" style="--i: 3" href="/pages/productos.html?cat=accesorios">
+              <img src="/img/aro-portatil.webp" alt="" loading="lazy" width="400" height="400" />
+              <h3 data-category-name="accesorios">Accesorios</h3>
+              <p><span data-category-count="accesorios"></span><span class="arrow-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span></p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0">
+        <div class="container">
+          <div class="section-head section-head--row reveal">
+            <div class="section-head">
+              <span class="eyebrow">Destacados</span>
+              <h2>Los más elegidos</h2>
+            </div>
+            <a class="btn btn--ghost" href="/pages/productos.html">Ver todo el catálogo</a>
+          </div>
+          <div class="product-grid product-grid--featured" id="featured-grid"></div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0">
+        <div class="container">
+          <div class="section-head section-head--center reveal">
+            <span class="eyebrow">Por qué CurrySite</span>
+            <h2>Jugamos de tu lado</h2>
+          </div>
+          <div class="features">
+            <article class="feature reveal" style="--i: 0">
+              <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v10H3zM14 10h4l3 3v4h-7" /><circle cx="7" cy="18" r="2" /><circle cx="17" cy="18" r="2" /></svg></span>
+              <h3>Envíos a todo el país</h3>
+              <p>Despachamos en 24 hs hábiles y podés seguir tu pedido en todo momento.</p>
+            </article>
+            <article class="feature reveal" style="--i: 1">
+              <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z" /><path d="m9 12 2 2 4-4" /></svg></span>
+              <h3>100% originales</h3>
+              <p>Trabajamos con distribuidores oficiales de cada marca. Sin réplicas, nunca.</p>
+            </article>
+            <article class="feature reveal" style="--i: 2">
+              <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4" /><path d="M4 21c1-4 4-6 8-6s7 2 8 6" /></svg></span>
+              <h3>Asesoramiento de jugadores</h3>
+              <p>Nuestro equipo juega. Te ayudamos a elegir según tu posición y tu cancha.</p>
+            </article>
+            <article class="feature reveal" style="--i: 3">
+              <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5" /></svg></span>
+              <h3>Cambios sin vueltas</h3>
+              <p>¿No te quedó el talle? Tenés 30 días para cambiarlo, sin preguntas.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0">
+        <div class="container">
+          <div class="cta-band reveal">
+            <img src="/img/cancha-indoor.webp" alt="" loading="lazy" width="1200" height="900" />
+            <span class="eyebrow">Tu próximo partido empieza acá</span>
             <h2>¿Listo para mejorar tu juego?</h2>
-            <p>Explora nuestra amplia selección de productos y equipamiento de básquetbol de alta calidad.</p>
-            <a href="pages/productos.html" class="button-alt">Ver Catálogo Completo</a>
-        </section>
+            <p>Explorá nuestra selección completa de equipamiento y encontrá lo que necesitás para dar el salto.</p>
+            <a class="btn" href="/pages/productos.html">
+              Ver catálogo completo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Vicente Básquetbol - Todos los derechos reservados.</p>
-        <p>Contacto: Tato.vicente08@gmail.com</p>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__grid">
+          <div class="site-footer__brand">
+            <a class="logo" href="/" aria-label="CurrySite, ir al inicio">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#FF6B1A" /><g fill="none" stroke="#0B0B0F" stroke-width="3"><path d="M2 32h60M32 2v60M11 11c9 9 9 33 0 42M53 11c-9 9-9 33 0 42" /></g></svg>
+              <span>Curry<em>Site</em></span>
+            </a>
+            <p>Equipamiento de básquetbol original para jugadores de todos los niveles. Online desde 2025.</p>
+          </div>
+          <div>
+            <h3>Tienda</h3>
+            <ul role="list">
+              <li><a href="/pages/productos.html?cat=balones">Balones</a></li>
+              <li><a href="/pages/productos.html?cat=zapatillas">Zapatillas</a></li>
+              <li><a href="/pages/productos.html?cat=indumentaria">Indumentaria</a></li>
+              <li><a href="/pages/productos.html?cat=accesorios">Accesorios</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>CurrySite</h3>
+            <ul role="list">
+              <li><a href="/pages/nosotros.html">Nosotros</a></li>
+              <li><a href="/pages/contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Contacto</h3>
+            <ul role="list">
+              <li><a href="mailto:Tato.vicente08@gmail.com">Tato.vicente08@gmail.com</a></li>
+              <li>Ing. Ernesto C. Boatti 629, Morón</li>
+              <li>Lun a Vie 9 a 18 hs · Sáb 10 a 14 hs</li>
+            </ul>
+          </div>
+        </div>
+        <div class="site-footer__bottom">
+          <p>&copy; <span data-year>2026</span> CurrySite. Todos los derechos reservados.</p>
+          <p>Diseño y desarrollo: Franco Vicente</p>
+        </div>
+        <p class="site-footer__wordmark" aria-hidden="true">CurrySite</p>
+      </div>
     </footer>
 
-</body>
+    <button class="back-to-top" type="button" aria-label="Volver arriba">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" /></svg>
+    </button>
+  </body>
 </html>
