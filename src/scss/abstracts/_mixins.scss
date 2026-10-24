@@ -1,0 +1,35 @@
+@use 'tokens' as *;
+
+@mixin up($bp) {
+  @media (min-width: $bp) { @content; }
+}
+
+@mixin down($bp) {
+  @media (max-width: ($bp - 0.02px)) { @content; }
+}
+
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) { &:hover { @content; } }
+}
+
+@mixin focus-ring {
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+}
+
+@mixin glass($alpha: 0.6) {
+  background: rgb(14 14 19 / #{$alpha});
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+}
+
+@mixin display($size) {
+  font-family: var(--font-display);
+  font-size: $size;
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
