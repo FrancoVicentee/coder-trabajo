@@ -1,66 +1,182 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Elementos de Básquetbol</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-    <header>
-        <h1><a href="../index.html">Contáctanos</a></h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto · CurrySite</title>
+    <meta name="description" content="Escribinos para consultas, asesoramiento sobre productos o pedidos especiales. Estamos en Morón, Buenos Aires." />
+    <meta name="theme-color" content="#0b0b0f" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Contacto · CurrySite" />
+    <meta property="og:description" content="Escribinos para consultas, asesoramiento sobre productos o pedidos especiales. Estamos en Morón, Buenos Aires." />
+    <meta property="og:image" content="/img/hero-arena.webp" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script>document.documentElement.classList.add('js')</script>
+    <script type="module" src="/src/js/main.js"></script>
+  </head>
+  <body data-page="contact">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="logo" href="/" aria-label="CurrySite, ir al inicio">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#FF6B1A" /><g fill="none" stroke="#0B0B0F" stroke-width="3"><path d="M2 32h60M32 2v60M11 11c9 9 9 33 0 42M53 11c-9 9-9 33 0 42" /></g></svg>
+          <span>Curry<em>Site</em></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" id="main-nav" aria-label="Principal">
+          <ul class="nav__list" role="list">
+            <li><a class="nav__link" href="/">Inicio</a></li>
+            <li><a class="nav__link" href="/pages/productos.html">Productos</a></li>
+            <li><a class="nav__link" href="/pages/nosotros.html">Nosotros</a></li>
+            <li><a class="nav__link" href="/pages/contacto.html">Contacto</a></li>
+            <li class="nav__cta"><a class="btn btn--sm" href="/pages/productos.html">Ver catálogo</a></li>
+          </ul>
         </nav>
+      </div>
     </header>
 
-    <main>
-        <section class="info-contacto">
-            <h2>Información de Contacto</h2>
-            <p>Estamos aquí para ayudarte. No dudes en contactarnos para cualquier consulta, sugerencia o para obtener asesoramiento sobre productos.</p>
-            <ul>
-                <li><strong>Email:</strong> <a href="mailto:info@elementosbasquet.com">Tato.Vicente08@gmail.com</a></li>
-                <li><strong>Teléfono:</strong> <a href="tel:+541112345678">+54 numero</a></li>
-                <li><strong>Dirección:</strong> Ubicada en el mapa</li>
-                <li><strong>Horarios:</strong> Lunes a Viernes de 9:00 a 18:00 hs. | Sábados de 10:00 a 14:00 hs.</li>
-            </ul>
-        </section>
+    <main id="contenido">
+      <section class="page-hero">
+        <div class="container">
+          <ol class="breadcrumb" role="list">
+            <li><a href="/">Inicio</a></li>
+            <li aria-current="page">Contacto</li>
+          </ol>
+          <h1>Hablemos de <span class="text-gradient">básquet</span></h1>
+          <p>Consultas, sugerencias o asesoramiento sobre productos: estamos para ayudarte.</p>
+        </div>
+      </section>
 
-        <section class="map-container">
-            <h2>Encuéntranos en el Mapa</h2>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d572.5501051629407!2d-58.61635755500248!3d-34.65516703376165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc76f50a596fd%3A0x6371e99cd48df003!2sJGM%2C%20Ing.%20Ernesto%20C.%20Boatti%20629%2C%20B1708%20Mor%C3%B3n%2C%20Provincia%20de%20Buenos%20Aires!5e1!3m2!1ses!2sar!4v1752450284988!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
+      <section class="section" style="padding-top: 0">
+        <div class="container contact-layout">
+          <div class="info-cards">
+            <article class="info-card reveal">
+              <span class="info-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg></span>
+              <div>
+                <h3>Email</h3>
+                <a href="mailto:Tato.vicente08@gmail.com">Tato.vicente08@gmail.com</a>
+              </div>
+            </article>
+            <article class="info-card reveal" style="--i: 1">
+              <span class="info-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z" /><circle cx="12" cy="9" r="2.5" /></svg></span>
+              <div>
+                <h3>Dirección</h3>
+                <p>Ing. Ernesto C. Boatti 629, Morón, Buenos Aires</p>
+              </div>
+            </article>
+            <article class="info-card reveal" style="--i: 2">
+              <span class="info-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg></span>
+              <div>
+                <h3>Horarios</h3>
+                <p>Lunes a viernes de 9 a 18 hs<br />Sábados de 10 a 14 hs</p>
+              </div>
+            </article>
+            <div class="map reveal" style="--i: 3">
+              <iframe
+                title="Mapa de ubicación de CurrySite en Morón"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d572.5501051629407!2d-58.61635755500248!3d-34.65516703376165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc76f50a596fd%3A0x6371e99cd48df003!2sJGM%2C%20Ing.%20Ernesto%20C.%20Boatti%20629%2C%20B1708%20Mor%C3%B3n%2C%20Provincia%20de%20Buenos%20Aires!5e1!3m2!1ses!2sar!4v1752450284988!5m2!1ses!2sar"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
 
-        <section class="formulario-contacto">
-            <h2>Envíanos un Mensaje</h2>
-            <form action="submit_form.php" method="POST"> <label for="nombre">Nombre Completo:</label>
-                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre y apellido">
-
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required placeholder="tu.correo@ejemplo.com">
-
-                <label for="telefono">Teléfono (opcional):</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="Tu numero aqui">
-
-                <label for="asunto">Asunto:</label>
-                <input type="text" id="asunto" name="asunto" required placeholder="Consulta sobre productos, soporte, etc.">
-
-                <label for="mensaje">Tu Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" rows="6" required placeholder="Escribe tu mensaje aquí..."></textarea>
-
-                <button type="submit">Enviar Mensaje</button>
-            </form>
-        </section>
+          <form class="form-card reveal" id="contact-form" novalidate>
+            <span class="eyebrow">Formulario</span>
+            <h2>Envianos un mensaje</h2>
+            <div class="form-card__row">
+              <div class="field">
+                <label for="nombre">Nombre completo</label>
+                <input class="input" id="nombre" name="nombre" type="text" autocomplete="name" placeholder="Tu nombre y apellido" required minlength="3" aria-describedby="nombre-error" />
+                <span class="field__error" id="nombre-error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input class="input" id="email" name="email" type="email" autocomplete="email" placeholder="tu@correo.com" required aria-describedby="email-error" />
+                <span class="field__error" id="email-error" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="form-card__row">
+              <div class="field">
+                <label for="telefono">Teléfono <span class="muted">(opcional)</span></label>
+                <input class="input" id="telefono" name="telefono" type="tel" autocomplete="tel" placeholder="11 1234-5678" pattern="[0-9+\s\-]{6,}" aria-describedby="telefono-error" />
+                <span class="field__error" id="telefono-error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="asunto">Asunto</label>
+                <input class="input" id="asunto" name="asunto" type="text" placeholder="Consulta sobre productos, talles…" required minlength="3" aria-describedby="asunto-error" />
+                <span class="field__error" id="asunto-error" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="field">
+              <label for="mensaje">Mensaje</label>
+              <textarea class="input" id="mensaje" name="mensaje" placeholder="Contanos en qué te podemos ayudar…" required minlength="10" aria-describedby="mensaje-error"></textarea>
+              <span class="field__error" id="mensaje-error" aria-live="polite"></span>
+            </div>
+            <button class="btn btn--block" type="submit">
+              Enviar mensaje
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z" /><path d="M22 2 11 13" /></svg>
+            </button>
+            <p class="form-status" id="form-status" role="status" hidden></p>
+            <p class="form-card__note">Al enviar se abre tu app de correo con el mensaje listo.</p>
+          </form>
+        </div>
+      </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Vicente Básquetbol - Todos los derechos reservados.</p>
-        <p>Contacto: Tato.vicente08@gmail.com</p>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__grid">
+          <div class="site-footer__brand">
+            <a class="logo" href="/" aria-label="CurrySite, ir al inicio">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#FF6B1A" /><g fill="none" stroke="#0B0B0F" stroke-width="3"><path d="M2 32h60M32 2v60M11 11c9 9 9 33 0 42M53 11c-9 9-9 33 0 42" /></g></svg>
+              <span>Curry<em>Site</em></span>
+            </a>
+            <p>Equipamiento de básquetbol original para jugadores de todos los niveles. Online desde 2025.</p>
+          </div>
+          <div>
+            <h3>Tienda</h3>
+            <ul role="list">
+              <li><a href="/pages/productos.html?cat=balones">Balones</a></li>
+              <li><a href="/pages/productos.html?cat=zapatillas">Zapatillas</a></li>
+              <li><a href="/pages/productos.html?cat=indumentaria">Indumentaria</a></li>
+              <li><a href="/pages/productos.html?cat=accesorios">Accesorios</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>CurrySite</h3>
+            <ul role="list">
+              <li><a href="/pages/nosotros.html">Nosotros</a></li>
+              <li><a href="/pages/contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Contacto</h3>
+            <ul role="list">
+              <li><a href="mailto:Tato.vicente08@gmail.com">Tato.vicente08@gmail.com</a></li>
+              <li>Ing. Ernesto C. Boatti 629, Morón</li>
+              <li>Lun a Vie 9 a 18 hs · Sáb 10 a 14 hs</li>
+            </ul>
+          </div>
+        </div>
+        <div class="site-footer__bottom">
+          <p>&copy; <span data-year>2026</span> CurrySite. Todos los derechos reservados.</p>
+          <p>Diseño y desarrollo: Franco Vicente</p>
+        </div>
+        <p class="site-footer__wordmark" aria-hidden="true">CurrySite</p>
+      </div>
     </footer>
-</body>
+
+    <button class="back-to-top" type="button" aria-label="Volver arriba">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" /></svg>
+    </button>
+  </body>
 </html>
