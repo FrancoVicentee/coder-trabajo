@@ -4,7 +4,6 @@ export const initHeader = () => {
   const header = $('.site-header');
   const toggle = $('.menu-toggle');
   const nav = $('#main-nav');
-  const progress = $('.scroll-progress');
   const backToTop = $('.back-to-top');
 
   // Marca el link de la página actual
@@ -33,31 +32,12 @@ export const initHeader = () => {
     }
   });
 
-  // Header con fondo al scrollear, se oculta al bajar y reaparece al subir
-  let lastY = window.scrollY;
-  let ticking = false;
-
   const update = () => {
-    const y = window.scrollY;
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    header.classList.toggle('is-scrolled', y > 20);
-    header.classList.toggle('is-hidden', y > lastY && y > 400 && !nav.classList.contains('is-open'));
-    progress.style.setProperty('--progress', max > 0 ? y / max : 0);
-    backToTop.classList.toggle('is-visible', y > 700);
-    lastY = y;
-    ticking = false;
+    header.classList.toggle('is-scrolled', window.scrollY > 20);
+    backToTop.classList.toggle('is-visible', window.scrollY > 700);
   };
 
-  window.addEventListener(
-    'scroll',
-    () => {
-      if (!ticking) {
-        requestAnimationFrame(update);
-        ticking = true;
-      }
-    },
-    { passive: true },
-  );
+  window.addEventListener('scroll', update, { passive: true });
   update();
 
   backToTop.addEventListener('click', () => window.scrollTo({ top: 0 }));

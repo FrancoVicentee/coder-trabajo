@@ -51,32 +51,3 @@ export const initCounters = () => {
   });
   counters.forEach((el) => observer.observe(el));
 };
-
-// Inclinación 3D + luz que sigue al cursor en las cards (solo con mouse)
-export const initTilt = (root = document) => {
-  if (prefersReducedMotion() || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
-
-  root.addEventListener('pointermove', (event) => {
-    const card = event.target.closest('[data-tilt]');
-    if (!card) return;
-    const rect = card.getBoundingClientRect();
-    const x = (event.clientX - rect.left) / rect.width;
-    const y = (event.clientY - rect.top) / rect.height;
-    card.style.setProperty('--mx', `${x * 100}%`);
-    card.style.setProperty('--my', `${y * 100}%`);
-    card.style.setProperty('--rx', `${(0.5 - y) * 8}deg`);
-    card.style.setProperty('--ry', `${(x - 0.5) * 8}deg`);
-  });
-
-  root.addEventListener(
-    'pointerout',
-    (event) => {
-      const card = event.target.closest('[data-tilt]');
-      if (card && !card.contains(event.relatedTarget)) {
-        card.style.setProperty('--rx', '0deg');
-        card.style.setProperty('--ry', '0deg');
-      }
-    },
-    true,
-  );
-};

@@ -1,7 +1,7 @@
 import { CATEGORIES, PRODUCTS } from '../data/products.js';
 import { productCard } from '../components/product-card.js';
 import { bindProductModal } from '../components/product-modal.js';
-import { $, $$, prefersReducedMotion } from '../utils.js';
+import { $, $$ } from '../utils.js';
 
 export default function initHome() {
   const grid = $('#featured-grid');
@@ -19,16 +19,4 @@ export default function initHome() {
     el.textContent = CATEGORIES[el.dataset.categoryName];
   });
 
-  // Parallax suave de la foto del hero
-  const hero = $('.hero');
-  if (hero && !prefersReducedMotion()) {
-    window.addEventListener(
-      'scroll',
-      () => {
-        const y = Math.min(window.scrollY, window.innerHeight);
-        hero.style.setProperty('--parallax', `${y * 0.25}px`);
-      },
-      { passive: true },
-    );
-  }
 }

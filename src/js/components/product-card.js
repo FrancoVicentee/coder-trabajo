@@ -6,7 +6,7 @@ export const priceTemplate = ({ price, oldPrice }) =>
   `<p class="price">${formatPrice(price)}${oldPrice ? ` <del>${formatPrice(oldPrice)}</del>` : ''}</p>`;
 
 export const productCard = (product, index = 0) => `
-  <article class="product-card is-entering" style="--i:${index}" data-tilt>
+  <article class="product-card is-entering" style="--i:${index}">
     <div class="product-card__media">
       ${product.badge ? `<span class="product-card__badge">${product.badge}</span>` : ''}
       <img src="${product.image}" alt="${product.name}" loading="lazy" decoding="async" width="400" height="400">

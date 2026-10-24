@@ -1,15 +1,5 @@
 @use '../abstracts' as *;
 
-.scroll-progress {
-  position: fixed;
-  inset: 0 0 auto;
-  z-index: 200;
-  height: 3px;
-  background: var(--gradient);
-  transform-origin: left;
-  transform: scaleX(var(--progress, 0));
-}
-
 .site-header {
   position: fixed;
   inset: 0 0 auto;
@@ -24,10 +14,6 @@
   &.is-scrolled {
     @include glass(0.72);
     border-color: var(--border);
-  }
-
-  &.is-hidden {
-    transform: translateY(-100%);
   }
 
   &__inner {

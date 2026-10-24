@@ -21,7 +21,6 @@
       object-fit: cover;
       opacity: 0.35;
       filter: grayscale(0.6) contrast(1.1);
-      transform: scale(1.08) translateY(var(--parallax, 0px));
     }
   }
 
@@ -103,30 +102,6 @@
     }
   }
 
-  &__scroll {
-    position: absolute;
-    left: 50%;
-    bottom: 1.75rem;
-    display: grid;
-    justify-items: center;
-    gap: 0.5rem;
-    color: var(--muted);
-    font-size: 0.7rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    transform: translateX(-50%);
-
-    @include down($bp-md) {
-      display: none;
-    }
-
-    span {
-      width: 1px;
-      height: 42px;
-      background: linear-gradient(var(--accent), transparent);
-      animation: float 2s ease-in-out infinite;
-    }
-  }
 }
 
 // Pelota animada (SVG) con su sombra y órbitas
@@ -146,7 +121,6 @@
 
   svg {
     width: 100%;
-    animation: spin 6s linear infinite;
   }
 }
 
@@ -158,40 +132,6 @@
   border-radius: 50%;
   background: radial-gradient(rgb(255 107 26 / 0.6), transparent 70%);
   animation: shadow-pulse 1.6s infinite;
-}
-
-.orbit {
-  position: absolute;
-  inset: 4%;
-  border: 1px dashed rgb(255 255 255 / 0.12);
-  border-radius: 50%;
-  animation: spin 40s linear infinite;
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -5px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 18px var(--accent);
-  }
-
-  &--inner {
-    inset: 18%;
-    border-style: solid;
-    border-color: rgb(255 107 26 / 0.15);
-    animation-duration: 26s;
-    animation-direction: reverse;
-
-    &::after {
-      top: -5px;
-      left: 50%;
-      background: var(--accent-2);
-    }
-  }
 }
 
 // ---------- Stats ----------

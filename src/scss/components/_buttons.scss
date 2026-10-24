@@ -2,8 +2,6 @@
 
 .btn {
   --btn-bg: var(--gradient);
-  position: relative;
-  isolation: isolate;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -16,22 +14,10 @@
   font-size: 0.95rem;
   letter-spacing: 0.01em;
   white-space: nowrap;
-  overflow: hidden;
   transition:
     transform 0.3s $ease-spring,
     box-shadow 0.3s ease;
   @include focus-ring;
-
-  // Brillo que cruza el botón al pasar el mouse
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background: linear-gradient(110deg, transparent 30%, rgb(255 255 255 / 0.45) 50%, transparent 70%);
-    transform: translateX(-120%);
-    transition: transform 0.7s $ease-out;
-  }
 
   svg {
     width: 18px;
@@ -42,10 +28,6 @@
   @include hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 30px -8px var(--glow);
-
-    &::before {
-      transform: translateX(120%);
-    }
 
     svg {
       transform: translateX(3px);
