@@ -1,11 +1,20 @@
 {
-  "name": "git-hub",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "currysite",
+  "version": "2.0.0",
+  "private": true,
+  "description": "CurrySite — tienda online de equipamiento de básquetbol. Sitio multipágina con Vite, SCSS modular y catálogo dinámico en JavaScript.",
+  "type": "module",
+  "author": "Franco Vicente",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "images": "node scripts/optimize-images.mjs"
   },
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "devDependencies": {
+    "sass": "^1.106.1",
+    "sharp": "^0.35.5",
+    "vite": "^6.4.5"
+  }
 }
