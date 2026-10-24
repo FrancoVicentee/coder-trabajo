@@ -1,49 +1,178 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros - Elementos de Básquetbol</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-    <header>
-        <h1><a href="../index.html">Sobre Nosotros</a></h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nosotros · CurrySite</title>
+    <meta name="description" content="Conocé la historia de CurrySite: desde 2025 equipando jugadores de básquet, hoy con nuestra propia web." />
+    <meta name="theme-color" content="#0b0b0f" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nosotros · CurrySite" />
+    <meta property="og:description" content="Conocé la historia de CurrySite: desde 2025 equipando jugadores de básquet, hoy con nuestra propia web." />
+    <meta property="og:image" content="/img/hero-arena.webp" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script>document.documentElement.classList.add('js')</script>
+    <script type="module" src="/src/js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="logo" href="/" aria-label="CurrySite, ir al inicio">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#FF6B1A" /><g fill="none" stroke="#0B0B0F" stroke-width="3"><path d="M2 32h60M32 2v60M11 11c9 9 9 33 0 42M53 11c-9 9-9 33 0 42" /></g></svg>
+          <span>Curry<em>Site</em></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" id="main-nav" aria-label="Principal">
+          <ul class="nav__list" role="list">
+            <li><a class="nav__link" href="/">Inicio</a></li>
+            <li><a class="nav__link" href="/pages/productos.html">Productos</a></li>
+            <li><a class="nav__link" href="/pages/nosotros.html">Nosotros</a></li>
+            <li><a class="nav__link" href="/pages/contacto.html">Contacto</a></li>
+            <li class="nav__cta"><a class="btn btn--sm" href="/pages/productos.html">Ver catálogo</a></li>
+          </ul>
         </nav>
+      </div>
     </header>
 
-    <main>
-        <section class="quienes-somos">
-            <h2>Nuestra Historia</h2>
-            <p>En **Elementos de Básquetbol**, nuestra pasión por este deporte es el motor que nos impulsa. Fundada en 2010 por un grupo de entusiastas y ex-jugadores, nuestra misión siempre ha sido clara: ser el destino principal para todos los amantes del básquetbol, desde el principiante hasta el profesional.</p>
-            <p>Comenzamos como una pequeña tienda local en Morón, Buenos Aires, y gracias al apoyo de nuestra creciente comunidad y a nuestro compromiso inquebrantable con la calidad y la atención al cliente, hemos expandido nuestra presencia online para servir a toda Latinoamérica. Cada balón, cada par de zapatillas y cada accesorio que ofrecemos es seleccionado cuidadosamente para asegurar que cumple con los más altos estándares de rendimiento y durabilidad.</p>
-            <p>Creemos que el básquetbol es más que un juego; es una forma de vida que enseña disciplina, trabajo en equipo y superación. Nos enorgullece ser parte del viaje de cada jugador, proporcionándoles las herramientas que necesitan para alcanzar su máximo potencial en la cancha.</p>
-        </section>
+    <main id="contenido">
+      <section class="page-hero">
+        <div class="container">
+          <ol class="breadcrumb" role="list">
+            <li><a href="/">Inicio</a></li>
+            <li aria-current="page">Nosotros</li>
+          </ol>
+          <h1>Más que una <span class="text-gradient">tienda</span></h1>
+          <p>Somos jugadores, entrenadores y fanáticos. Desde 2025 acompañamos a quienes viven el básquet dentro y fuera de la cancha.</p>
+        </div>
+      </section>
 
-        <section class="vision-mision">
-            <h2>Visión y Misión</h2>
-            <h3>Visión</h3>
-            <p>Ser la plataforma líder y más confiable para la adquisición de equipamiento de básquetbol en el mercado hispanohablante, fomentando el crecimiento del deporte a través de la excelencia en productos y un servicio al cliente excepcional.</p>
-            <h3>Misión</h3>
-            <p>Proporcionar a los jugadores de básquetbol de todas las edades y niveles acceso a una gama diversa de equipamiento de alta calidad, garantizando una experiencia de compra informada y satisfactoria. Nos comprometemos a impulsar el rendimiento individual y colectivo, contribuyendo al desarrollo de una comunidad apasionada por el básquetbol.</p>
-        </section>
+      <section class="section" style="padding-top: 0">
+        <div class="container split">
+          <div class="split__text reveal">
+            <span class="eyebrow">Nuestra historia</span>
+            <h2>Nacimos vendiendo online</h2>
+            <p>Arrancamos en 2025 vendiendo equipamiento de básquet por internet, con una misión clara: que cualquier jugador, desde el principiante hasta el profesional, pueda conseguir productos originales y bien elegidos.</p>
+            <p>Gracias a nuestra comunidad y al compromiso con la calidad y la atención, crecimos rápido. Cada balón, cada par de zapatillas y cada accesorio está seleccionado para cumplir con los más altos estándares de rendimiento.</p>
+            <p>Creemos que el básquet es más que un juego: enseña disciplina, trabajo en equipo y superación. Nos enorgullece ser parte del camino de cada jugador.</p>
+          </div>
+          <figure class="split__media reveal" style="--i: 1">
+            <img src="/img/hero-arena.webp" alt="Estadio de básquet lleno durante un partido" loading="lazy" width="1600" height="900" />
+            <figcaption><strong>2026</strong> lanzamos CurrySite</figcaption>
+          </figure>
+        </div>
+      </section>
 
-        <section class="our-team">
-            <h2>Nuestro Equipo</h2>
-            <p>Detrás de Elementos de Básquetbol hay un equipo dedicado de profesionales y amantes del deporte, listos para asesorarte y compartir su conocimiento.</p>
-            </section>
+      <section class="section" style="padding-top: 2rem">
+        <div class="container split">
+          <div class="split__text reveal">
+            <span class="eyebrow">El camino</span>
+            <h2>De la venta online a nuestra web</h2>
+            <p>Cada paso lo dimos junto a nuestra comunidad de jugadores.</p>
+          </div>
+          <ol class="timeline" role="list">
+            <li class="reveal" style="--i: 0">
+              <time datetime="2025">2025</time>
+              <h3>Primeras ventas por la web</h3>
+              <p>Empezamos a vender equipamiento de básquet online, asesorando a cada cliente como lo haría un compañero de equipo.</p>
+            </li>
+            <li class="reveal" style="--i: 1">
+              <time datetime="2026">2026</time>
+              <h3>Nace CurrySite</h3>
+              <p>Hoy presentamos nuestra propia página web: CurrySite, con todo el catálogo en un solo lugar.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0">
+        <div class="container">
+          <div class="section-head section-head--center reveal">
+            <span class="eyebrow">Lo que nos mueve</span>
+            <h2>Visión y misión</h2>
+          </div>
+          <div class="mission">
+            <article class="reveal">
+              <span class="eyebrow">Visión</span>
+              <h3>Ser la referencia del básquet</h3>
+              <p>Ser la plataforma líder y más confiable para adquirir equipamiento de básquetbol en el mercado hispanohablante, impulsando el crecimiento del deporte a través de productos excelentes y un servicio excepcional.</p>
+            </article>
+            <article class="reveal" style="--i: 1">
+              <span class="eyebrow">Misión</span>
+              <h3>Equipar a cada jugador</h3>
+              <p>Dar a jugadores de todas las edades y niveles acceso a equipamiento de alta calidad con una experiencia de compra informada, contribuyendo al desarrollo de una comunidad apasionada por el básquet.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0">
+        <div class="container">
+          <div class="cta-band reveal">
+            <span class="eyebrow">Nuestro equipo</span>
+            <h2>Hablá con alguien que juega</h2>
+            <p>Detrás de CurrySite hay un equipo de profesionales y amantes del deporte listos para asesorarte.</p>
+            <a class="btn" href="/pages/contacto.html">
+              Escribinos
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Vicente Básquetbol - Todos los derechos reservados.</p>
-        <p>Contacto: Tato.vicente08@gmail.com</p>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__grid">
+          <div class="site-footer__brand">
+            <a class="logo" href="/" aria-label="CurrySite, ir al inicio">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#FF6B1A" /><g fill="none" stroke="#0B0B0F" stroke-width="3"><path d="M2 32h60M32 2v60M11 11c9 9 9 33 0 42M53 11c-9 9-9 33 0 42" /></g></svg>
+              <span>Curry<em>Site</em></span>
+            </a>
+            <p>Equipamiento de básquetbol original para jugadores de todos los niveles. Online desde 2025.</p>
+          </div>
+          <div>
+            <h3>Tienda</h3>
+            <ul role="list">
+              <li><a href="/pages/productos.html?cat=balones">Balones</a></li>
+              <li><a href="/pages/productos.html?cat=zapatillas">Zapatillas</a></li>
+              <li><a href="/pages/productos.html?cat=indumentaria">Indumentaria</a></li>
+              <li><a href="/pages/productos.html?cat=accesorios">Accesorios</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>CurrySite</h3>
+            <ul role="list">
+              <li><a href="/pages/nosotros.html">Nosotros</a></li>
+              <li><a href="/pages/contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Contacto</h3>
+            <ul role="list">
+              <li><a href="mailto:Tato.vicente08@gmail.com">Tato.vicente08@gmail.com</a></li>
+              <li>Ing. Ernesto C. Boatti 629, Morón</li>
+              <li>Lun a Vie 9 a 18 hs · Sáb 10 a 14 hs</li>
+            </ul>
+          </div>
+        </div>
+        <div class="site-footer__bottom">
+          <p>&copy; <span data-year>2026</span> CurrySite. Todos los derechos reservados.</p>
+          <p>Diseño y desarrollo: Franco Vicente</p>
+        </div>
+        <p class="site-footer__wordmark" aria-hidden="true">CurrySite</p>
+      </div>
     </footer>
-</body>
+
+    <button class="back-to-top" type="button" aria-label="Volver arriba">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" /></svg>
+    </button>
+  </body>
 </html>
