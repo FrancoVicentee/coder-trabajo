@@ -1,0 +1,136 @@
+@use '../abstracts' as *;
+
+.btn {
+  --btn-bg: var(--gradient);
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.95rem 1.7rem;
+  border-radius: 999px;
+  background: var(--btn-bg);
+  color: #0b0b0f;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  transition:
+    transform 0.3s $ease-spring,
+    box-shadow 0.3s ease;
+  @include focus-ring;
+
+  // Brillo que cruza el botón al pasar el mouse
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(110deg, transparent 30%, rgb(255 255 255 / 0.45) 50%, transparent 70%);
+    transform: translateX(-120%);
+    transition: transform 0.7s $ease-out;
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s $ease-out;
+  }
+
+  @include hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px -8px var(--glow);
+
+    &::before {
+      transform: translateX(120%);
+    }
+
+    svg {
+      transform: translateX(3px);
+    }
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.98);
+  }
+
+  &--ghost {
+    --btn-bg: transparent;
+    color: var(--text);
+    border: 1px solid var(--border-strong);
+
+    @include hover {
+      border-color: var(--accent);
+      box-shadow: none;
+      background: var(--accent-soft);
+    }
+  }
+
+  &--sm {
+    padding: 0.65rem 1.2rem;
+    font-size: 0.875rem;
+  }
+
+  &--block {
+    width: 100%;
+  }
+}
+
+.icon-btn {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  transition:
+    border-color 0.2s ease,
+    transform 0.3s $ease-spring;
+  @include focus-ring;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  @include hover {
+    border-color: var(--accent);
+    transform: rotate(90deg);
+  }
+}
+
+.back-to-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--gradient);
+  color: #0b0b0f;
+  box-shadow: 0 10px 30px -10px var(--glow);
+  opacity: 0;
+  transform: translateY(20px) scale(0.8);
+  pointer-events: none;
+  transition:
+    opacity 0.3s ease,
+    transform 0.4s $ease-spring;
+  @include focus-ring;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  &.is-visible {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+}
